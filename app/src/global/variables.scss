@@ -1,5 +1,7 @@
-$color-main: #0c4da2;
-$color-main-lighter: #0e64b2;
+$color-main: #0e64b2;
+$color-main-darker: #0c4da2;
+$color-main-hover: lighten($color-main, 10%);
+$color-main-active: darken($color-main, 5%);
 
 $color-text: #333;
 $color-gray: #f6f6f6;
@@ -19,17 +21,9 @@ $font-fa: 'FontAwesome', sans-serif;
 
 $duration: .3s;
 
-// ----------------------------
-// МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА
-// ----------------------------
-
-// ----------------------------
-//
-//
-//
-// -------------
-// ОБЩИЕ МИКСИНЫ
-// -------------
+%transition {
+	transition: $duration / 2 ease;
+}
 
 // Брейкпоинты
 @mixin screen-sm($direct: 'min') {

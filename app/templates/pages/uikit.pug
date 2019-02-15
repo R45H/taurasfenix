@@ -1,3 +1,5 @@
+include ../mixins/svg
+
 .container
 	.row.main__separator
 		.col-12
@@ -19,3 +21,15 @@
 	.row.main__separator
 		.col-12
 			.title .title
+
+	.row.main__separator
+		.col-3
+			a.link(href='#') .link
+		.col-3
+			a.link.link_icon_before(href='#')
+				| .link.link_icon_before
+				+svg('tel', 'link__icon')
+		.col-3
+			a.link.link_line_none(href='#') .link.link_line_none
+		.col-3
+			a.link.link_nowrap(href='#') .link.link_nowrap

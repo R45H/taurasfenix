@@ -1,0 +1,65 @@
+$name: link;
+
+.#{$name} {
+	@extend a:not([class]);
+
+	&__icon {
+		width: 2em;
+		height: 1.334em;
+		max-height: none;
+		position: absolute;
+		right: 100%;
+		padding-right: .4em;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&_icon_before {
+		position: relative;
+		margin-left: 30px;
+		fill: $color-main;
+
+		&:hover {
+			fill: $color-main-hover;
+		}
+
+		&:active {
+			fill: $color-main-active;
+		}
+	}
+
+	&_line_none {
+		border-bottom: none;
+	}
+
+	&_nowrap {
+		white-space: nowrap;
+	}
+}
+
+span.#{$name} {
+
+	&:hover,
+	&:active {
+		color: inherit;
+		border-color: inherit;
+	}
+
+	&_icon_before,
+	&_icon_after {
+
+		&:hover,
+		&:active {
+			fill: $color-main;
+		}
+	}
+
+	&_color_1 {
+		color: $color-main;
+
+		&:hover,
+		&:active {
+			color: $color-main;
+		}
+	}
+}

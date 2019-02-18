@@ -1,0 +1,111 @@
+$name: slider-single;
+
+.#{$name} {
+	overflow: hidden;
+	background: white;
+	position: relative;
+
+	.slick-list {
+		margin: -10px;
+	}
+
+	.slick-slide {
+		outline: none;
+
+		> div {
+			display: flex;
+		}
+	}
+
+	&__item {
+		padding: 10px;
+	}
+
+	&__img {
+		display: block;
+		background: no-repeat center / cover;
+		padding-bottom: 25%;
+		outline: none;
+	}
+
+	&__dots {
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		list-style-type: none;
+	}
+
+	&__dot {
+		@extend %transition;
+		width: 15px;
+		height: 15px;
+		display: block;
+		background-color: $color-gray;
+	}
+
+	li {
+		padding: 5px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+
+			.#{$name} {
+				// =====
+
+				&__dot {
+					background-color: $color-gray-hover;
+				}
+			}
+		}
+
+		&:active {
+
+			.#{$name} {
+				// =====
+
+				&__dot {
+					background-color: $color-gray-active;
+				}
+			}
+		}
+
+		&.slick-active {
+
+			.#{$name} {
+				// =====
+
+				&__dot {
+					background-color: $color-main;
+				}
+			}
+
+			&:hover,
+			&:focus {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background-color: $color-main-hover;
+					}
+				}
+			}
+
+			&:active {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background-color: $color-main-active;
+					}
+				}
+			}
+		}
+	}
+}

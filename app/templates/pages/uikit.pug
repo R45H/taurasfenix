@@ -6,6 +6,7 @@ include ../mixins/cat
 include ../mixins/subcat
 include ../mixins/news
 include ../mixins/news-simple
+include ../mixins/slider-single
 
 .container
 	.row.main__separator
@@ -115,45 +116,53 @@ include ../mixins/news-simple
 	.row.main__separator
 		.col-4
 			+cat({
-				'title': 'Подбор пищевого оборудования',
-				'link': '#',
-				'img': 'img/content/cat.jpg',
-				'desc': 'Подбор оборудования по типу: вертикальные и горизонтальные фасовочно-упаковочные аппараты, дозаторы, линии розлива, отсадочные машины, комплексы образования групповой упаковки и дополнительное оборудование.'
+				title: 'Подбор пищевого оборудования',
+				link: '#',
+				img: 'img/content/cat.jpg',
+				desc: 'Подбор оборудования по типу: вертикальные и горизонтальные фасовочно-упаковочные аппараты, дозаторы, линии розлива, отсадочные машины, комплексы образования групповой упаковки и дополнительное оборудование.'
 			})
 
 	.row.main__separator
 		.col-3
 			+subcat({
-				'title': 'Подбор пищевого оборудования',
-				'link': '#',
-				'img': 'img/content/subcat.png',
-				'params': [
+				title: 'Подбор пищевого оборудования',
+				link: '#',
+				img: 'img/content/subcat.png',
+				params: [
 					'Производительность до: 80 упак/мин',
 					'Особенность: бюджетная производительная модель.'
 				],
-				'check': {
-					'text': 'Сравнение',
-					'id': 'check-subcat-1'
+				check: {
+					text: 'Сравнение',
+					id: 'check-subcat-1'
 				}
 			})
 
 	.row.main__separator
 		.col-9
 			+news({
-				'date': '07.02.2019',
-				'title': 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
-				'link': '#',
-				'img': 'img/content/news.jpg'
+				date: '07.02.2019',
+				title: 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
+				link: '#',
+				img: 'img/content/news.jpg'
 			})
 
 	.row.main__separator
 		.col-9
 			+news-simple({
-				'date': '07.02.2019',
-				'title': 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
-				'link': '#'
+				date: '07.02.2019',
+				title: 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
+				link: '#'
 			})
 
 	.row.main__separator
 		.col-9
 			.block .block
+
+	.row.main__separator
+		.col-12
+			+slider-single([
+				{link: '#', img: 'img/content/slider-single.jpg'},
+				{link: '#', img: 'img/content/slider-single.jpg'},
+				{link: '#', img: 'img/content/slider-single.jpg'}
+			])

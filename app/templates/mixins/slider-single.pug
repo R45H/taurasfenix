@@ -1,0 +1,9 @@
+mixin slider-single(data)
+	.slider-single
+
+		each val in data
+			.slider-single__item
+				a.slider-single__img(
+					href= val.link
+					style='background-image: url(' + val.img + ');'
+				)

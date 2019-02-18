@@ -1,0 +1,45 @@
+$name: news;
+
+.#{$name} {
+	padding: 15px;
+	background: $color-light;
+
+	@include screen-sm() {
+		display: flex;
+	}
+
+	&__img-wrap {
+		display: block;
+		width: 100%;
+		margin-bottom: 15px;
+
+		@include screen-sm() {
+			flex: none;
+			width: 150px;
+			margin-bottom: 0;
+			margin-right: 15px;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		padding-bottom: 80%;
+	}
+
+	&__text-wrap {
+		flex: auto;
+	}
+
+	&__date {
+
+	}
+
+	&__title {
+
+	}
+
+	&__more-link {
+
+	}
+}

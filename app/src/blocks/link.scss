@@ -19,12 +19,24 @@ $name: link;
 		margin-left: 30px;
 		fill: $color-main;
 
+		&.#{$name}_color_text {
+			fill: $color-text;
+		}
+
 		&:hover {
 			fill: $color-main-hover;
+
+			&.#{$name}_color_text {
+				fill: $color-text-hover;
+			}
 		}
 
 		&:active {
 			fill: $color-main-active;
+
+			&.#{$name}_color_text {
+				fill: $color-text-active;
+			}
 		}
 	}
 
@@ -35,31 +47,27 @@ $name: link;
 	&_nowrap {
 		white-space: nowrap;
 	}
-}
 
-span.#{$name} {
-
-	&:hover,
-	&:active {
-		color: inherit;
-		border-color: inherit;
+	&_size_sm {
+		font-size: 12px;
 	}
 
-	&_icon_before,
-	&_icon_after {
+	&_italic {
+		font-style: italic;
+	}
 
-		&:hover,
-		&:active {
-			fill: $color-main;
+	&_color_text {
+		color: $color-text;
+		border-bottom-color: $color-text;
+
+		&:hover {
+			color: $color-text-hover;
+			border-bottom-color: transparent;
 		}
-	}
 
-	&_color_1 {
-		color: $color-main;
-
-		&:hover,
 		&:active {
-			color: $color-main;
+			color: $color-text-active;
+			border-bottom-color: transparent;
 		}
 	}
 }

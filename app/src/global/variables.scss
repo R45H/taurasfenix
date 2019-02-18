@@ -9,6 +9,9 @@ $color-gray-active: darken($color-gray, 5%);
 $color-gray-light: #c1c1c1;
 
 $color-text: #333;
+$color-text-hover: lighten($color-text, 10%);
+$color-text-active: darken($color-text, 5%);
+
 $color-light: #f6f6f6;
 
 $color-vk: #45668e;

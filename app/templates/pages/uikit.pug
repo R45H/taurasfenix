@@ -4,6 +4,7 @@ include ../mixins/logo
 include ../mixins/check
 include ../mixins/cat
 include ../mixins/subcat
+include ../mixins/news
 
 .container
 	.row.main__separator
@@ -32,16 +33,22 @@ include ../mixins/subcat
 			.title.title_size_sm .title.title_size_sm
 
 	.row.main__separator
-		.col-3
+		.col-3.mb-15
 			a.link(href='#') .link
-		.col-3
+		.col-3.mb-15
 			a.link.link_icon_before(href='#')
 				| .link.link_icon_before
 				+svg('dialog', 'link__icon')
-		.col-3
+		.col-3.mb-15
 			a.link.link_line_none(href='#') .link.link_line_none
-		.col-3
+		.col-3.mb-15
 			a.link.link_nowrap(href='#') .link.link_nowrap
+		.col-3.mb-15
+			a.link.link_size_sm(href='#') .link.link_size_sm
+		.col-3.mb-15
+			a.link.link_italic(href='#') .link.link_italic
+		.col-3.mb-15
+			a.link.link_color_text(href='#') .link.link_color_text
 
 	.row.main__separator
 		.col-2.mb-15
@@ -88,7 +95,7 @@ include ../mixins/subcat
 			})(class='check_reverse')
 		.col-3
 			+check({
-				id: 'check-2',
+				id: 'check-3',
 				text: '.check.check_text_sm'
 			})(class='check_text_sm')
 
@@ -115,4 +122,13 @@ include ../mixins/subcat
 					'text': 'Сравнение',
 					'id': 'check-subcat-1'
 				}
+			})
+
+	.row.main__separator
+		.col-9
+			+news({
+				'date': '07.02.2019',
+				'title': 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
+				'link': '#',
+				'img': 'img/content/news.jpg'
 			})

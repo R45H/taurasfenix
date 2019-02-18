@@ -1,6 +1,7 @@
 include ../components/social
 include ../mixins/svg
 include ../mixins/logo
+include ../mixins/cat
 
 .container
 	.row.main__separator
@@ -68,4 +69,13 @@ include ../mixins/logo
 		.col-3
 			+logo({
 				link: false
+			})
+
+	.row.main__separator
+		.col-4
+			+cat({
+				'title': 'Подбор пищевого оборудования',
+				'link': '#',
+				'img': 'img/content/cat.jpg',
+				'desc': 'Подбор оборудования по типу: вертикальные и горизонтальные фасовочно-упаковочные аппараты, дозаторы, линии розлива, отсадочные машины, комплексы образования групповой упаковки и дополнительное оборудование.'
 			})

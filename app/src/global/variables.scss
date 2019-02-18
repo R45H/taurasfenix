@@ -6,13 +6,16 @@ $color-main-active: darken($color-main, 5%);
 $color-gray: #848484;
 $color-gray-hover: lighten($color-gray, 10%);
 $color-gray-active: darken($color-gray, 5%);
+$color-gray-light: #c1c1c1;
 
 $color-text: #333;
-$color-lightgray: #f6f6f6;
+$color-light: #f6f6f6;
 
 $color-vk: #45668e;
 $color-fb: #3b5998;
 $color-yt: #b00;
+
+$shadow: 0 0 18px rgba(black, .32);
 
 $point-sm: 576px;
 $point-md: 768px;

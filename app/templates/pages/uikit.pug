@@ -5,6 +5,7 @@ include ../mixins/check
 include ../mixins/cat
 include ../mixins/subcat
 include ../mixins/news
+include ../mixins/news-simple
 
 .container
 	.row.main__separator
@@ -31,6 +32,8 @@ include ../mixins/news
 			.title.title_size_lg .title.title_size_lg
 		.col-4
 			.title.title_size_sm .title.title_size_sm
+		.col-4
+			.title.title_weight_normal .title.title_weight_normal
 
 	.row.main__separator
 		.col-3.mb-15
@@ -131,6 +134,14 @@ include ../mixins/news
 				'title': 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
 				'link': '#',
 				'img': 'img/content/news.jpg'
+			})
+
+	.row.main__separator
+		.col-9
+			+news-simple({
+				'date': '07.02.2019',
+				'title': 'В «таурас-феникс» прошло совещание по открытию совместных отраслевых кафедр с отечественными промышленными предприятиями',
+				'link': '#'
 			})
 
 	.row.main__separator

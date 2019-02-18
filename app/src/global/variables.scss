@@ -3,8 +3,12 @@ $color-main-darker: #0c4da2;
 $color-main-hover: lighten($color-main, 10%);
 $color-main-active: darken($color-main, 5%);
 
+$color-gray: #848484;
+$color-gray-hover: lighten($color-gray, 10%);
+$color-gray-active: darken($color-gray, 5%);
+
 $color-text: #333;
-$color-gray: #f6f6f6;
+$color-lightgray: #f6f6f6;
 
 $color-vk: #45668e;
 $color-fb: #3b5998;

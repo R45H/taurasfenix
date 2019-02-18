@@ -1,0 +1,71 @@
+$name: btn;
+
+.#{$name} {
+	@extend %transition;
+	display: inline-block;
+	position: relative;
+	font-family: $font-main;
+	font-size: 13px;
+	font-weight: normal;
+	color: white;
+	border: 2px solid $color-main;
+	background-color: $color-main;
+	text-align: center;
+	cursor: pointer;
+	line-height: 1.5;
+	outline: none;
+	padding: 3px 20px;
+	word-break: break-word;
+	user-select: none;
+
+	&:hover,
+	&:focus {
+		color: $color-main-hover;
+		background-color: white;
+	}
+
+	&:active {
+		color: $color-main-active;
+		border-color: currentColor;
+	}
+
+	&_wide {
+		display: block;
+		width: 100%;
+	}
+
+	&_text_lg {
+		font-family: $font-second;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&_text_xl {
+		font-family: $font-second;
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	&_size_lg {
+		padding: 13px 40px;
+	}
+
+	&_color_gray {
+		background-color: $color-gray;
+		border-color: $color-gray;
+
+		&:hover,
+		&:focus {
+			color: $color-gray;
+			background-color: white;
+		}
+
+		&:active {
+			color: $color-gray-active;
+		}
+	}
+}
+
+input.#{$name} {
+	white-space: pre-wrap;
+}

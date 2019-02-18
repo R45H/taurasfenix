@@ -5,4 +5,8 @@ $name: title;
 	font-size: 17px;
 	font-weight: bold;
 	text-transform: uppercase;
+
+	&_size_lg {
+		font-size: 22px;
+	}
 }

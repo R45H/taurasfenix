@@ -1,0 +1,32 @@
+$name: logo;
+
+.#{$name} {
+	@extend %transition;
+	fill: $color-main;
+	display: block;
+
+	&__wrap {
+		display: block;
+		position: relative;
+		padding-bottom: 23%;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+a.#{$name} {
+
+	&:hover {
+		fill: $color-main-hover;
+	}
+
+	&:active {
+		fill: $color-main-active;
+	}
+}

@@ -1,5 +1,6 @@
 include ../components/social
 include ../mixins/svg
+include ../mixins/logo
 
 .container
 	.row.main__separator
@@ -38,3 +39,11 @@ include ../mixins/svg
 	.row.main__separator
 		.col-12
 			+social(social)
+
+	.row.main__separator
+		.col-3
+			+logo()
+		.col-3
+			+logo({
+				link: false
+			})

@@ -2,6 +2,9 @@ $(function() {
 
 	//=require 'global/global.js'
 
+	(function() {
+		//=require 'blocks/input/input.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

@@ -1,0 +1,6 @@
+$name: block;
+
+.#{$name} {
+	box-shadow: $shadow;
+	padding: 15px;
+}

@@ -1,0 +1,99 @@
+$name: check;
+
+.#{$name} {
+	display: flex;
+
+	&__input {
+		display: none;
+
+		&:checked {
+
+			+ label {
+
+				&::before {
+					background-color: $color-main;
+				}
+
+				&:hover {
+
+					&::before {
+						background-color: $color-main-hover;
+					}
+				}
+
+				&:active {
+
+					&::before {
+						background-color: $color-main-active;
+					}
+				}
+			}
+		}
+	}
+
+	&__label {
+		@extend %transition;
+		display: inline-flex;
+		align-items: flex-start;
+		cursor: pointer;
+		user-select: none;
+
+		&::before {
+			@extend %transition;
+			content: '';
+			width: 18px;
+			height: 18px;
+			border: 1px solid $color-main;
+			background-color: transparent;
+			background-clip: content-box;
+			padding: 2px;
+			margin-right: 10px;
+			margin-top: 2px;
+		}
+
+		&:hover {
+
+			&::before {
+				border-color: $color-main-hover;
+			}
+		}
+
+		&:active {
+
+			&::before {
+				border-color: $color-main-active;
+			}
+		}
+	}
+
+	&_reverse {
+
+		.#{$name} {
+			// =====
+
+			&__label {
+
+				&::before {
+					order: 1;
+					margin-right: 0;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	&_text_sm {
+		font-size: 12px;
+
+		.#{$name} {
+			// =====
+
+			&__label {
+
+				&::before {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

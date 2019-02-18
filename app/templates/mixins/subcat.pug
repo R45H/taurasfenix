@@ -1,0 +1,22 @@
+include check
+
+mixin subcat(data)
+	.subcat
+		.title.title_size_sm.text-center.mb-15.subcat__title
+			a.link(href= data.link)= data.title
+
+		a.subcat__img-wrap.mb-15(href= data.link)
+			.subcat__img(style='background-image: url(' + data.img + ');')
+
+		if data.params
+			.subcat__params
+
+				each val in data.params
+					.subcat__param= val
+
+		if data.check
+			.subcat__check
+				+check({
+					id: data.check.id,
+					text: data.check.text
+				})(class='check_reverse check_text_sm')

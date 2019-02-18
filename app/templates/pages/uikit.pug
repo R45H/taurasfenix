@@ -1,7 +1,9 @@
 include ../components/social
 include ../mixins/svg
 include ../mixins/logo
+include ../mixins/check
 include ../mixins/cat
+include ../mixins/subcat
 
 .container
 	.row.main__separator
@@ -26,6 +28,8 @@ include ../mixins/cat
 			.title .title
 		.col-4
 			.title.title_size_lg .title.title_size_lg
+		.col-4
+			.title.title_size_sm .title.title_size_sm
 
 	.row.main__separator
 		.col-3
@@ -72,10 +76,43 @@ include ../mixins/cat
 			})
 
 	.row.main__separator
+		.col-2
+			+check({
+				id: 'check-1',
+				text: '.check'
+			})
+		.col-3
+			+check({
+				id: 'check-2',
+				text: '.check.check_reverse'
+			})(class='check_reverse')
+		.col-3
+			+check({
+				id: 'check-2',
+				text: '.check.check_text_sm'
+			})(class='check_text_sm')
+
+	.row.main__separator
 		.col-4
 			+cat({
 				'title': 'Подбор пищевого оборудования',
 				'link': '#',
 				'img': 'img/content/cat.jpg',
 				'desc': 'Подбор оборудования по типу: вертикальные и горизонтальные фасовочно-упаковочные аппараты, дозаторы, линии розлива, отсадочные машины, комплексы образования групповой упаковки и дополнительное оборудование.'
+			})
+
+	.row.main__separator
+		.col-3
+			+subcat({
+				'title': 'Подбор пищевого оборудования',
+				'link': '#',
+				'img': 'img/content/subcat.png',
+				'params': [
+					'Производительность до: 80 упак/мин',
+					'Особенность: бюджетная производительная модель.'
+				],
+				'check': {
+					'text': 'Сравнение',
+					'id': 'check-subcat-1'
+				}
 			})

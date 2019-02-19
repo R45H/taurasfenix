@@ -183,3 +183,24 @@ include ../mixins/slider-single
 				{link: '#', img: 'img/content/slider-single.jpg'},
 				{link: '#', img: 'img/content/slider-single.jpg'}
 			])
+
+	.row.main__separator
+		.col-12
+			.slider(
+				data-cols='1'
+				data-sm-cols='2'
+				data-md-cols='3'
+				data-lg-cols='4'
+				data-xl-cols='5'
+			)
+				.slider__body
+
+					- for (var i = 0; i < 6; i++) {
+						.slider__item
+							+fancybox({
+								link: 'img/content/slider.jpg',
+								image: 'img/content/slider.jpg',
+								title: 'Img ' + (i + 1),
+								group: 'group-slider-1'
+							})
+					- }

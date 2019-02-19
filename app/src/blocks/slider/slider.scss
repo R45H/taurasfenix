@@ -1,0 +1,76 @@
+$name: slider;
+
+.#{$name} {
+	position: relative;
+
+	&__body {
+		overflow: hidden;
+	}
+
+	.slick-list {
+		margin: -7px;
+	}
+
+	.slick-slide {
+		outline: none;
+
+		> div {
+			display: flex;
+		}
+	}
+
+	&__item {
+		padding: 7px;
+	}
+
+	&__arrow {
+		@extend %transition;
+		color: $color-main;
+		background-color: white;
+		border: 1px solid $color-light;
+		font-size: 30px;
+		width: 30px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+		cursor: pointer;
+
+		&::after {
+			font-family: $font-fa;
+			display: block;
+			line-height: 1;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-main-hover;
+			box-shadow: $shadow;
+		}
+
+		&:active {
+			color: $color-main-active;
+		}
+
+		&_prev {
+			left: -5px;
+
+			&::after {
+				content: '\f104';
+			}
+		}
+
+		&_next {
+			right: -5px;
+
+			&::after {
+				content: '\f105';
+			}
+		}
+	}
+}

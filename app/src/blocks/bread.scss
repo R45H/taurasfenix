@@ -1,0 +1,38 @@
+$name: bread;
+
+.#{$name} {
+	list-style-type: none;
+
+	&__item {
+		display: inline-flex;
+		position: relative;
+		font-style: italic;
+
+		&::after {
+			content: '\f105';
+			font-family: $font-fa;
+			position: absolute;
+			right: 0;
+			width: 20px;
+			text-align: center;
+			color: $color-gray;
+		}
+
+		&:last-child {
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	&__link {
+		color: $color-gray;
+		margin-right: 20px;
+		display: block;
+	}
+
+	&__text {
+		color: $color-text;
+	}
+}

@@ -8,6 +8,7 @@ include ../mixins/news
 include ../mixins/news-simple
 include ../mixins/fancybox
 include ../mixins/slider-single
+include ../components/bread
 
 .container
 	.row.main__separator
@@ -198,3 +199,7 @@ include ../mixins/slider-single
 								group: 'group-slider-1'
 							})
 					- }
+
+	.row.main__separator
+		.col-12
+			+bread

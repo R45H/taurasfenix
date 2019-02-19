@@ -1,0 +1,57 @@
+$name: fancybox;
+
+.#{$name} {
+	display: block;
+	position: relative;
+	outline: none;
+	border: 1px solid $color-gray-light;
+
+	&::after {
+		@extend %transition;
+		content: '\f002';
+		font-family: $font-fa;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 5rem;
+		color: white;
+		text-shadow: 2px 1px 1px $color-text;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(black, .25);
+		opacity: 0;
+		z-index: 1;
+	}
+
+	&:hover {
+
+		&::after {
+			opacity: .7;
+		}
+	}
+
+	&__image {
+		display: block;
+		padding-bottom: 66%;
+		background: no-repeat center / cover;
+	}
+
+	&_video {
+
+		&::after {
+			content: '';
+			opacity: .81;
+			background: transparent url('../img/icons/youtube.svg') no-repeat center / 27%;
+		}
+
+		&:hover {
+
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+}

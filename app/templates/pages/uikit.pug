@@ -6,6 +6,7 @@ include ../mixins/cat
 include ../mixins/subcat
 include ../mixins/news
 include ../mixins/news-simple
+include ../mixins/fancybox
 include ../mixins/slider-single
 
 .container
@@ -158,6 +159,22 @@ include ../mixins/slider-single
 	.row.main__separator
 		.col-9
 			.block .block
+
+	.row.main__separator
+		.col-3
+			+fancybox({
+				link: 'img/content/slider.jpg',
+				image: 'img/content/slider.jpg',
+				title: 'Img 1',
+				group: 'group-1'
+			})
+		.col-3
+			+fancybox({
+				link: 'https://www.youtube.com/embed/6uuwDlRKpj4?modestbranding=1&rel=0',
+				image: 'img/content/slider.jpg',
+				title: 'Video 1',
+				group: 'group-2'
+			})(class='fancybox_video')
 
 	.row.main__separator
 		.col-12

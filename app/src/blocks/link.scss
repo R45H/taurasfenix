@@ -19,55 +19,16 @@ $name: link;
 		margin-left: 30px;
 		fill: $color-main;
 
-		&.#{$name}_color_text {
-			fill: $color-text;
-		}
-
 		&:hover {
 			fill: $color-main-hover;
-
-			&.#{$name}_color_text {
-				fill: $color-text-hover;
-			}
 		}
 
 		&:active {
 			fill: $color-main-active;
-
-			&.#{$name}_color_text {
-				fill: $color-text-active;
-			}
 		}
-	}
-
-	&_line_none {
-		border-bottom: none;
 	}
 
 	&_nowrap {
 		white-space: nowrap;
-	}
-
-	&_size_sm {
-		font-size: 12px;
-	}
-
-	&_italic {
-		font-style: italic;
-	}
-
-	&_color_text {
-		color: $color-text;
-		border-bottom-color: $color-text;
-
-		&:hover {
-			color: $color-text-hover;
-			border-bottom-color: transparent;
-		}
-
-		&:active {
-			color: $color-text-active;
-			border-bottom-color: transparent;
-		}
 	}
 }

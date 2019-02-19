@@ -7,5 +7,5 @@ mixin news(data)
 		.news__text-wrap
 			.title.title_size_sm.mb-5.news__date= data.date
 			.title.mb-5.news__title
-				a.link.link_line_none.link_color_text(href= data.link)= data.title
-			a.link.link_size_sm.link_italic.mb-5.news__more-link(href= data.link) Подробнее
+				a.link.news__link(href= data.link)= data.title
+			a.link.text-sm.text-italic.mb-5.news__more-link(href= data.link) Подробнее

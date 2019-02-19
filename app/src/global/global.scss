@@ -72,16 +72,13 @@ a {
 	&[class=''] {
 		@extend %transition;
 		color: $color-main;
-		border-bottom: 1px solid $color-main;
 
 		&:hover {
 			color: $color-main-hover;
-			border-bottom-color: transparent;
 		}
 
 		&:active {
 			color: $color-main-active;
-			border-bottom-color: transparent;
 		}
 	}
 }
@@ -113,8 +110,12 @@ svg {
 	text-align: right !important;
 }
 
-.color-main {
-	color: $color-main;
+.text-sm {
+	font-size: 12px;
+}
+
+.text-italic {
+	font-style: italic;
 }
 
 .color-white {

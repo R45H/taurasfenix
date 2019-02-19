@@ -1,2 +1,82 @@
+include ../components/social
+include ../mixins/svg
+
 // FOOTER
 footer.footer
+	.container
+
+		.footer__top
+			.footer__top-inner
+				.footer__top-col.text-sm
+					b Обособленное подразделение АО ТАУРАС-ФЕНИКС:
+					br
+					| 197374, Санкт-Петербург, Торфяная дорога, 9
+					br
+					b Юридический адрес:
+					|
+					|
+					| 196240, Россия, г. Санкт-Петербург,
+					br
+					| ул. Кубинская, д. 80, лит. Б, пом. 11Н, оф. 606
+					br
+					b Тел:
+					|
+					|
+					a(href='tel:+78002004910') 8 (800) 200-49-10
+					| ,
+					|
+					|
+					a(href='tel:+78124948808') +7 (812) 494-88-08
+					br
+					b E-mail:
+					|
+					|
+					a(href='mailto:tplant@taurasfenix.com') tplant@taurasfenix.com
+
+				.footer__top-col.footer__top-col_space_right.text-sm
+					b Телефоны региональных представительств
+					br
+					b Москва:
+					|
+					|
+					a(href='tel:+74996493184') +7 (499) 649-31-84
+					br
+					b Екатеринбург:
+					|
+					|
+					a(href='tel:+73433831255') +7 (343) 383-12-55
+					br
+					b Новосибирск:
+					|
+					|
+					a(href='tel:+73832091940') +7 (383) 209-19-40
+					br
+					b Саратов:
+					|
+					|
+					a(href='tel:+78452258740') +7 (8452) 25-87-40
+					br
+					b Черкассы, Украина:
+					|
+					|
+					a(href='tel:+380472362031') +38 0472 36-20-31
+
+				.footer__top-col
+					.footer__link
+						a.link.link_icon_before(href='#')
+							| Задать вопрос
+							+svg('dialog', 'link__icon')
+					.footer__link
+						a.link.link_icon_before(href='#')
+							| Заказать звонок
+							+svg('tel', 'link__icon')
+					.footer__link
+						a.link.link_icon_before(href='#')
+							| Написать письмо
+							+svg('mail', 'link__icon')
+
+		.footer__bottom
+			.footer__bottom-inner
+				.footer__bottom-col.text-sm Сopyright 1998-2018 МАШИНОСТРОИТЕЛЬНЫЙ ЗАВОД ТАУРАС-ФЕНИКС
+				.footer__bottom-col
+					+social(social)

@@ -1,5 +1,55 @@
 $name: footer;
 
 .#{$name} {
+	flex: 0 0 auto;
 
+	&__top {
+		border-top: 3px solid $color-main-darker;
+		padding: 15px 0 0;
+	}
+
+	&__top-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0 -15px;
+	}
+
+	&__top-col {
+		padding: 0 15px;
+		margin-bottom: 15px;
+
+		&_space_right {
+			margin-right: auto;
+		}
+	}
+
+	&__link {
+		font-family: $font-second;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&__bottom {
+		border-top: 3px solid $color-gray-light;
+		padding: 15px 0 0;
+	}
+
+	&__bottom-inner {
+		margin: 0 -15px;
+		text-align: center;
+
+		@include screen-md() {
+			text-align: left;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__bottom-col {
+		padding: 0 15px;
+		margin-bottom: 15px;
+	}
 }

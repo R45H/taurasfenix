@@ -4,6 +4,7 @@ $name: logo;
 	@extend %transition;
 	fill: $color-main;
 	display: block;
+	width: 100%;
 
 	&__wrap {
 		display: block;

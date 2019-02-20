@@ -1,2 +1,70 @@
+include ../components/toggle
+include ../mixins/svg
+include ../mixins/logo
+
 // HEADER
 header.header
+
+	.header__top
+		.container
+			.header__top-inner
+
+				.header__top-col
+					.title.header__title
+						.header__link
+							a.link.link_icon_before.link_color_white(href='tel:+78124948808')
+								| +7 (812) 494-88-08
+								+svg('tel', 'link__icon')
+						.header__link
+							a.link.link_color_white(href='tel:+78002004910') 8 (800) 200-49-10
+
+				.header__top-col.header__top-col_space_right
+					.title.title_size_sm
+						a.link.link_icon_before.link_color_white(href='#')
+							| Задать вопрос
+							+svg('ask', 'link__icon')
+
+	.header__bottom
+		.container
+			.header__bottom-inner
+
+				.header__bottom-col.header__logo-wrap
+					+logo({
+						link: page.link !== global.link_home
+					})
+
+				.header__bottom-col.header__menu-wrap
+
+					.menu.header__menu
+						ul.menu__wrap
+
+							each val in menu
+								li.menu__item
+									a.title.title_size_sm.menu__link(href= val.link)= val.name
+
+									if val.sub
+										.menu__sub-wrap
+											.menu__sub
+
+												if val.sub.image
+													.menu__image-wrap
+														.menu__image(style='background-image: url(' + val.sub.image + ');')
+
+												ul.menu__sub-list
+
+													each sub, i in val.sub.items
+
+														if i < (val.sub.items.length / 2)
+															li.menu__sub-item
+																a.menu__sub-link(href= sub.link)= sub.name
+
+												ul.menu__sub-list
+
+													each sub, i in val.sub.items
+
+														if i >= (val.sub.items.length / 2)
+															li.menu__sub-item
+																a.menu__sub-link(href= sub.link)= sub.name
+
+				.header__bottom-col.header__toggle-wrap
+					+toggle

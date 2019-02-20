@@ -12,6 +12,9 @@ $(function() {
 		//=require 'blocks/slider/slider.js'
 	}());
 	(function() {
+		//=require 'blocks/menu/menu.js'
+	}());
+	(function() {
 		//=require 'blocks/toggle/toggle.js'
 	}());
 	/* Blocks will be inserted here */

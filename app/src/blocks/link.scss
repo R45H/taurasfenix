@@ -17,18 +17,22 @@ $name: link;
 	&_icon_before {
 		position: relative;
 		margin-left: 30px;
-		fill: $color-main;
-
-		&:hover {
-			fill: $color-main-hover;
-		}
-
-		&:active {
-			fill: $color-main-active;
-		}
+		fill: currentColor;
 	}
 
 	&_nowrap {
 		white-space: nowrap;
+	}
+
+	&_color_white {
+		color: white;
+
+		&:hover {
+			color: darken(white, 15%);
+		}
+
+		&:active {
+			color: darken(white, 30%);
+		}
 	}
 }

@@ -28,6 +28,11 @@ $name: menu;
 
 	&__sub-wrap {
 		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: 1;
 	}
 
 	&__sub {
@@ -35,12 +40,7 @@ $name: menu;
 		color: white;
 		display: flex;
 		align-items: flex-start;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
 		padding: 20px;
-		z-index: 1;
 	}
 
 	&__image-wrap {

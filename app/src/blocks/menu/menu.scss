@@ -12,6 +12,7 @@ $name: menu;
 
 	&__item {
 		@extend %transition;
+		color: black;
 
 		&:hover {
 			background-color: $color-main;
@@ -24,6 +25,10 @@ $name: menu;
 		height: 100%;
 		display: flex;
 		align-items: center;
+		font-family: $font-second;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 
 	&__sub-wrap {

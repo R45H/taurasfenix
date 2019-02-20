@@ -10,7 +10,7 @@ include ../mixins/news-simple
 	])
 
 .container
-	.row.mb-15.mb-md-0.justify-content-center
+	.row.mb-15.mb-md-0
 
 		- for (var i = 0; i < 3; i++) {
 			.col-md-6.col-xl-4.mb-15.mb-md-30
@@ -29,9 +29,9 @@ include ../mixins/news-simple
 				.col-auto
 					.title Новости
 				.col-auto
-					a.link.text-sm.text-italic(href='#') Все новости
+					a.link.text-italic(href='#') Все новости
 
-			.row.justify-content-center.mb-neg-30
+			.row.mb-neg-30
 
 				- for (var i = 0; i < 3; i++) {
 					.col-md-6.col-lg-4.mb-30

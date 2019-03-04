@@ -19,11 +19,19 @@ include ../mixins/subcat
 		.col-sm-6.col-md-8.col-lg-9.mb-15
 			.row
 
-				- for (var i = 0; i < 15; i++) {
+				- for (var i = 0; i < 9; i++) {
 					.col-12.col-md-6.col-lg-4.mb-15.mb-sm-30
 						+subcat({
 							title: 'Подбор пищевого оборудования',
 							link: '#',
-							img: 'img/content/subcat.png'
+							img: 'img/content/subcat.png',
+							params: [
+								'Производительность до: 80 упак/мин',
+								'Особенность: бюджетная производительная модель.'
+							],
+							check: {
+								text: 'Сравнение',
+								id: 'check-subcat-' + (i + 1)
+							}
 						})
-					- }
+				- }

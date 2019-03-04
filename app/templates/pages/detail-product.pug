@@ -1,0 +1,95 @@
+include ../components/bread
+include ../mixins/fancybox
+
+.main__bread-wrap.mb-30
+	.container
+		+bread
+
+.container
+
+	.row
+		.col-md-5.col-xl-6.mb-30
+			.main__detail-image
+				+fancybox({
+					link: 'img/content/slider.jpg',
+					image: 'img/content/slider.jpg',
+					title: 'Img 2',
+					group: 'group-3'
+				})(class='fancybox_rect')
+
+		.col-md-7.col-xl-6.mb-30
+			.main__detail-wrap.mb-neg-20
+
+				.main__detail-title-wrap.mb-20
+					h1.title.title_size_lg= page.title
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Видео:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var i = 0; i < 6; i++) {
+								.slider__item
+									+fancybox({
+										link: 'https://www.youtube.com/embed/6uuwDlRKpj4?modestbranding=1&rel=0',
+										image: 'img/content/slider.jpg',
+										title: 'Img ' + (i + 1),
+										group: 'group-slider-1'
+									})(class='fancybox_video')
+							- }
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Упаковка:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var i = 0; i < 6; i++) {
+								.slider__item
+									+fancybox({
+										link: 'img/content/slider.jpg',
+										image: 'img/content/slider.jpg',
+										title: 'Img ' + (i + 1),
+										group: 'group-slider-2'
+									})
+							- }
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Оборудование:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var i = 0; i < 6; i++) {
+								.slider__item
+									+fancybox({
+										link: 'img/content/subcat.png',
+										image: 'img/content/subcat.png',
+										title: 'Img ' + (i + 1),
+										group: 'group-slider-3',
+										hasTitle: true
+									})(class='fancybox_contain')
+							- }
+
+	.mb-30.text-center.text-md-right
+		a.btn.btn_text_xl.upper(href='#') Заказать консультацию
+
+	.mb-50.text
+		p Уже много веков молоко считается главным продуктом питания у человека. Этот напиток является не только основой всех кисломолочных напитков, но имеет широкое распространение во всех сферах пищевой промышленности.
+		p Цвет молока может варьироваться от белого до желтоватого – это определяет процент его жирности. Организм человека способен усваивать данный напиток на 95% - 98%. Питательная ценность молока настолько высока, что при ежедневном его употреблении может удовлетворить среднюю суточную потребность человеческого организма в жире, кальции, фосфоре и многими другими минеральными веществами.
+		h3 Фасовка и упаковка молока
+		p Молоко является таким продуктом, который требует к себе повышенного внимания не только в процессе производства, но и расфасовки. Правильно организованный технологический процесс производства и розлива этого напитка способен сохранить все самые полезные свойства.
+		p Современное оборудование позволяет осуществлять розлив продукта в бутылки, пакеты типа «Пюр Пак» и «Подушка». Аппараты Таурас-Феникс отвечают всем санитарным требованиям, предъявляемым к оборудованию для розлива и пакетированию молока.

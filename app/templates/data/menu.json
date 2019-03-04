@@ -34,22 +34,22 @@
 			"sub": {
 				"image": "img/content/slider.jpg",
 				"items": [
-					{"link": "#", "name": "Молочная продукция"},
-					{"link": "#", "name": "Бакалея"},
-					{"link": "#", "name": "Кондитерские изделия"},
-					{"link": "#", "name": "Напитки"},
-					{"link": "#", "name": "Снеки"},
-					{"link": "#", "name": "Бытовая химия"},
-					{"link": "#", "name": "Растительное масло, соусы"},
-					{"link": "#", "name": "Хлебобулочная продукция"},
-					{"link": "#", "name": "Фрукты и овощи"},
-					{"link": "#", "name": "Мясо"},
-					{"link": "#", "name": "Замороженные продукты"},
-					{"link": "#", "name": "Рыба и морепродукты"},
-					{"link": "#", "name": "Семена, земля, удобрения"},
-					{"link": "#", "name": "Товары для животных"},
-					{"link": "#", "name": "Строительные материалы"},
-					{"link": "#", "name": "Готовые блюда"}
+					{"link": "detail-product.html", "name": "Молочная продукция"},
+					{"link": "detail-product.html", "name": "Бакалея"},
+					{"link": "detail-product.html", "name": "Кондитерские изделия"},
+					{"link": "detail-product.html", "name": "Напитки"},
+					{"link": "detail-product.html", "name": "Снеки"},
+					{"link": "detail-product.html", "name": "Бытовая химия"},
+					{"link": "detail-product.html", "name": "Растительное масло, соусы"},
+					{"link": "detail-product.html", "name": "Хлебобулочная продукция"},
+					{"link": "detail-product.html", "name": "Фрукты и овощи"},
+					{"link": "detail-product.html", "name": "Мясо"},
+					{"link": "detail-product.html", "name": "Замороженные продукты"},
+					{"link": "detail-product.html", "name": "Рыба и морепродукты"},
+					{"link": "detail-product.html", "name": "Семена, земля, удобрения"},
+					{"link": "detail-product.html", "name": "Товары для животных"},
+					{"link": "detail-product.html", "name": "Строительные материалы"},
+					{"link": "detail-product.html", "name": "Готовые блюда"}
 				]
 			},
 			"sidebar": true

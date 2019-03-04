@@ -14,30 +14,49 @@ include ../components/toggle
 .container
 	.row.main__separator
 		.col-12
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id placeat unde? Ab aliquid amet asperiores at autem commodi cum dolor dolorum ducimus earum et facilis hic in incidunt inventore
-				|
-				|
-				a(href='#') laboriosam molestiae officia
-				|
-				|
-				| optio perferendis perspiciatis placeat possimus praesentium quaerat quibusdam quo recusandae reiciendis, rem repellat saepe sed sint voluptatum.
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id placeat unde? Ab aliquid amet asperiores at autem commodi cum dolor dolorum ducimus earum et facilis hic in incidunt inventore
-				|
-				|
-				a(href='#') laboriosam molestiae officia
-				|
-				|
-				| optio perferendis perspiciatis placeat possimus praesentium quaerat quibusdam quo recusandae reiciendis, rem repellat saepe sed sint voluptatum.
+			.text
+				h1 Lorem ipsum dolor sit amet, consectetur
+				h2 Lorem ipsum dolor sit amet, consectetur
+				h3 Lorem ipsum dolor sit amet, consectetur
+				h4 Lorem ipsum dolor sit amet, consectetur
+				h5 Lorem ipsum dolor sit amet, consectetur
+				h6 Lorem ipsum dolor sit amet, consectetur
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id placeat unde? Ab aliquid amet asperiores at autem commodi cum dolor dolorum ducimus earum et facilis hic in incidunt inventore
+					|
+					|
+					a(href='#') laboriosam molestiae officia
+					|
+					|
+					| optio perferendis perspiciatis placeat possimus praesentium quaerat quibusdam quo recusandae reiciendis, rem repellat saepe sed sint voluptatum.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id placeat unde? Ab aliquid amet asperiores at autem commodi cum dolor dolorum ducimus earum et facilis hic in incidunt inventore
+					|
+					|
+					a(href='#') laboriosam molestiae officia
+					|
+					|
+					| optio perferendis perspiciatis placeat possimus praesentium quaerat quibusdam quo recusandae reiciendis, rem repellat saepe sed sint voluptatum.
+				ul
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
+				ol
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
+					li Lorem ipsum dolor sit amet, consectetur
 
 	.row.main__separator
-		.col-4
+		.col-4.mb-15
 			.title .title
-		.col-4
+		.col-4.mb-15
 			.title.title_size_lg .title.title_size_lg
-		.col-4
+		.col-4.mb-15
 			.title.title_size_sm .title.title_size_sm
-		.col-4
+		.col-4.mb-15
 			.title.title_weight_normal .title.title_weight_normal
+		.col-4.mb-15
+			.title.title_lower .title.title_lower
 
 	.row.main__separator
 		.col-2.mb-15
@@ -64,6 +83,12 @@ include ../components/toggle
 			.btn.btn_wide .btn.btn_wide
 		.col-3.mb-15
 			.btn.btn_color_gray .btn.btn_color_gray
+		.col-3.mb-15
+			.btn.btn_text_lg .btn.btn_text_lg
+		.col-3.mb-15
+			.btn.btn_text_xl .btn.btn_text_xl
+		.col-3.mb-15
+			.btn.btn_size_lg .btn.btn_size_lg
 
 	.row.main__separator
 		.col-3.mb-30
@@ -165,6 +190,28 @@ include ../components/toggle
 				title: 'Video 1',
 				group: 'group-2'
 			})(class='fancybox_video')
+		.col-3
+			+fancybox({
+				link: 'img/content/slider.jpg',
+				image: 'img/content/slider.jpg',
+				title: 'Img 2',
+				group: 'group-3'
+			})(class='fancybox_rect')
+		.col-3
+			+fancybox({
+				link: 'img/content/slider.jpg',
+				image: 'img/content/slider.jpg',
+				title: 'Img 3',
+				group: 'group-4',
+				hasTitle: true
+			})
+		.col-3
+			+fancybox({
+				link: 'img/content/slider.jpg',
+				image: 'img/content/slider.jpg',
+				title: 'Img 4',
+				group: 'group-5'
+			})(class='fancybox_contain')
 
 	.row.main__separator
 		.col-12
@@ -175,7 +222,7 @@ include ../components/toggle
 			])
 
 	.row.main__separator
-		.col-12
+		.col-12.mb-30
 			.slider(
 				data-cols='1'
 				data-sm-cols='2'
@@ -192,6 +239,49 @@ include ../components/toggle
 								image: 'img/content/slider.jpg',
 								title: 'Img ' + (i + 1),
 								group: 'group-slider-1'
+							})
+					- }
+		.col-12.mb-30
+			.slider.slider_space(
+				data-cols='1'
+				data-sm-cols='2'
+				data-md-cols='3'
+				data-lg-cols='4'
+			)
+				.slider__body
+
+					- for (var i = 0; i < 6; i++) {
+						.slider__item
+							+subcat({
+								title: 'Подбор пищевого оборудования',
+								link: '#',
+								img: 'img/content/subcat.png',
+								params: [
+									'Производительность до: 80 упак/мин',
+									'Особенность: бюджетная производительная модель.'
+								],
+								check: {
+									text: 'Сравнение',
+									id: 'check-subcat-slider-1' + (i + 1)
+								}
+							})
+					- }
+		.col-12.mb-30
+			.slider.slider_infinite_disabled(
+				data-cols='1'
+				data-sm-cols='2'
+				data-md-cols='3'
+				data-lg-cols='4'
+			)
+				.slider__body
+
+					- for (var i = 0; i < 6; i++) {
+						.slider__item
+							+fancybox({
+								link: 'img/content/slider.jpg',
+								image: 'img/content/slider.jpg',
+								title: 'Img ' + (i + 1),
+								group: 'group-slider-2'
 							})
 					- }
 

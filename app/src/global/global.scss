@@ -102,12 +102,128 @@ svg {
 	text-align: left !important;
 }
 
+.text-sm-left {
+
+	@include screen-sm() {
+		text-align: left !important;
+	}
+}
+
+.text-md-left {
+
+	@include screen-md() {
+		text-align: left !important;
+	}
+}
+
+.text-lg-left {
+
+	@include screen-lg() {
+		text-align: left !important;
+	}
+}
+
+.text-xl-left {
+
+	@include screen-xl() {
+		text-align: left !important;
+	}
+}
+
 .text-center {
 	text-align: center !important;
+
+	&.title::after {
+		margin: 0 auto;
+	}
+}
+
+.text-sm-center {
+
+	@include screen-sm() {
+		text-align: center !important;
+	}
+
+	&.title::after {
+
+		@include screen-sm() {
+			margin: 0 auto;
+		}
+	}
+}
+
+.text-md-center {
+
+	@include screen-md() {
+		text-align: center !important;
+	}
+
+	&.title::after {
+
+		@include screen-md() {
+			margin: 0 auto;
+		}
+	}
+}
+
+.text-lg-center {
+
+	@include screen-lg() {
+		text-align: center !important;
+	}
+
+	&.title::after {
+
+		@include screen-lg() {
+			margin: 0 auto;
+		}
+	}
+}
+
+.text-xl-center {
+
+	@include screen-xl() {
+		text-align: center !important;
+	}
+
+	&.title::after {
+
+		@include screen-xl() {
+			margin: 0 auto;
+		}
+	}
 }
 
 .text-right {
 	text-align: right !important;
+}
+
+.text-sm-right {
+
+	@include screen-sm() {
+		text-align: right !important;
+	}
+}
+
+.text-md-right {
+
+	@include screen-md() {
+		text-align: right !important;
+	}
+}
+
+.text-lg-right {
+
+	@include screen-lg() {
+		text-align: right !important;
+	}
+}
+
+.text-xl-right {
+
+	@include screen-xl() {
+		text-align: right !important;
+	}
 }
 
 .text-sm {
@@ -120,6 +236,10 @@ svg {
 
 .color-white {
 	color: white;
+}
+
+.upper {
+	text-transform: uppercase;
 }
 
 .mb-0 {

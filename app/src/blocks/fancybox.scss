@@ -39,6 +39,11 @@ $name: fancybox;
 		background: no-repeat center / cover;
 	}
 
+	&__title {
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
 	&_video {
 
 		&::after {
@@ -51,6 +56,26 @@ $name: fancybox;
 
 			&::after {
 				opacity: 1;
+			}
+		}
+	}
+
+	&_rect {
+
+		.#{$name} {
+
+			&__image {
+				padding-bottom: 100%;
+			}
+		}
+	}
+
+	&_contain {
+
+		.#{$name} {
+
+			&__image {
+				background-size: contain;
 			}
 		}
 	}

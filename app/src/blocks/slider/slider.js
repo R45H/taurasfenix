@@ -12,12 +12,14 @@ $blocks.each(function() {
 		sliderSmCols = +$this.attr('data-sm-cols') || sliderCols || 1,
 		sliderMdCols = +$this.attr('data-md-cols') || sliderSmCols || sliderCols || 1,
 		sliderLgCols = +$this.attr('data-lg-cols') || sliderMdCols || sliderCols || 1,
-		sliderXlCols = +$this.attr('data-xl-cols') || sliderLgCols || sliderCols || 1;
+		sliderXlCols = +$this.attr('data-xl-cols') || sliderLgCols || sliderCols || 1,
+		isInfinite = !$this.hasClass(classBlock + '_infinite_disabled');
 
 	$slider.slick({
 		prevArrow: $prevArrow,
 		nextArrow: $nextArrow,
 		appendArrows: $this,
+		infinite: isInfinite,
 		slidesToShow: sliderCols,
 		slidesToScroll: sliderCols,
 		mobileFirst: true,

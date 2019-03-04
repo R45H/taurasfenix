@@ -16,7 +16,7 @@ mixin sidebar
 
 				ul.sidebar__submenu
 
-					each sub in val.sub.items
+					each sub, i in val.sub.items
 
-						li.sidebar__submenu-item
+						li.sidebar__submenu-item(class= !i ? 'sidebar__submenu-item_active' : '')
 							a.sidebar__submenu-link(href= sub.link)= sub.name

@@ -3,16 +3,20 @@ $name: slider;
 .#{$name} {
 	position: relative;
 
+	a {
+		outline: none;
+	}
+
 	&__body {
 		overflow: hidden;
+		margin: -10px;
 	}
 
 	.slick-list {
-		margin: -7px;
+
 	}
 
 	.slick-slide {
-		outline: none;
 
 		> div {
 			display: flex;
@@ -20,7 +24,7 @@ $name: slider;
 	}
 
 	&__item {
-		padding: 7px;
+		padding: 10px;
 	}
 
 	&__arrow {

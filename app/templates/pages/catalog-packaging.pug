@@ -1,0 +1,41 @@
+include ../components/bread
+include ../components/sidebar
+include ../mixins/subcat
+
+.main__bread-wrap.mb-30
+	.container
+		+bread
+
+.container
+
+	.mb-20
+		h1.title.title_size_lg= page.title
+
+	.row
+
+		.col-sm-6.order-sm-1.col-md-4.col-lg-3.mb-15
+			+sidebar
+
+		.col-sm-6.col-md-8.col-lg-9.mb-15
+
+			- for (var i = 0; i < 5; i++) {
+				.mb-30
+					.mb-15
+						h2.title Упаковка из полипропиленовой плёнки
+
+					.slider(
+						data-cols='1'
+						data-md-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var j = 0; j < 6; j++) {
+								.slider__item
+									+subcat({
+										title: 'Подбор пищевого оборудования',
+										link: '#',
+										img: 'img/content/subcat.png'
+									})
+							- }
+			- }

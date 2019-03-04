@@ -38,10 +38,14 @@ $name: subcat;
 		margin-top: 10px;
 		padding-top: 10px;
 		border-top: 1px solid $color-gray-light;
+
+		&:first-child {
+			margin-top: 15px;
+		}
 	}
 
 	&__check {
-		margin-top: 20px;
+		margin-top: 15px;
 		display: flex;
 		justify-content: center;
 		text-align: center;

@@ -12,4 +12,9 @@ $name: main;
 	&__black {
 		background: black;
 	}
+
+	&__bread-wrap {
+		padding: 15px 0;
+		border-bottom: 1px solid $color-gray-light;
+	}
 }

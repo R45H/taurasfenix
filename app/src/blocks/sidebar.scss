@@ -1,0 +1,88 @@
+$name: sidebar;
+
+.#{$name} {
+
+	&__menu {
+		list-style-type: none;
+		background-color: $color-light;
+	}
+
+	&__menu-item {
+		@extend %transition;
+		color: black;
+
+		&:hover {
+			background-color: $color-main;
+			color: white;
+		}
+
+		&:active {
+			background-color: $color-main-active;
+			color: white;
+		}
+
+		&_active {
+			background-color: $color-main;
+			color: white;
+
+			&:hover {
+				background-color: $color-main-hover;
+			}
+
+			&:active {
+				background-color: $color-main-active;
+			}
+		}
+	}
+
+	&__menu-link {
+		padding: 15px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		font-family: $font-second;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__submenu {
+		list-style-type: none;
+		background-color: $color-light;
+	}
+
+	&__submenu-item {
+		@extend %transition;
+
+		&:hover {
+			background-color: $color-gray-hover;
+			color: white;
+		}
+
+		&:active {
+			background-color: $color-gray-active;
+			color: white;
+		}
+
+		&:last-child {
+
+			.#{$name} {
+
+				&__submenu-link {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+	&__submenu-link {
+		padding: 7px 15px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		font-family: $font-second;
+		font-size: 14px;
+		font-weight: normal;
+		border-bottom: 1px solid $color-gray-light;
+	}
+}

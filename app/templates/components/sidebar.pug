@@ -1,0 +1,22 @@
+mixin sidebar
+	.sidebar
+
+		ul.sidebar__menu.mb-15
+
+			each val in menu
+
+				if val.sidebar
+
+					li.sidebar__menu-item(class= val.link === page.link ? 'sidebar__menu-item_active' : '')
+						a.sidebar__menu-link(href= val.link)= val.name
+
+		each val in menu
+
+			if val.link === page.link
+
+				ul.sidebar__submenu
+
+					each sub in val.sub.items
+
+						li.sidebar__submenu-item
+							a.sidebar__submenu-link(href= sub.link)= sub.name

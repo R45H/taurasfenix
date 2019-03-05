@@ -13,12 +13,21 @@ $menuItemsWithSub.each(function() {
 		$sub = $this.find('.' + classBlock + '__sub-wrap');
 
 	$this.on('mouseenter', function() {
-		$sub
-			.stop(true, true)
-			.fadeIn(delay);
+		$this.addClass(classBlock + '__item_hover');
+
+		setTimeout(function() {
+
+			if ($this.hasClass(classBlock + '__item_hover')) {
+				$sub
+					.stop(true, true)
+					.fadeIn(delay);
+			}
+		}, 100);
 	});
 
 	$this.on('mouseleave', function() {
+		$this.removeClass(classBlock + '__item_hover');
+
 		$sub
 			.stop(true, true)
 			.fadeOut(delay);

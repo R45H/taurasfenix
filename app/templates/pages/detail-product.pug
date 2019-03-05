@@ -10,12 +10,19 @@ include ../mixins/fancybox
 	.row.mb-20
 		.col-md-5.col-xl-6.mb-30
 			.main__detail-image
-				+fancybox({
-					link: 'img/content/slider.jpg',
-					image: 'img/content/slider.jpg',
-					title: 'Img 2',
-					group: 'group-3'
-				})(class='fancybox_rect')
+
+				.slider.slider_infinite_disabled
+					.slider__body
+
+						- for (var i = 0; i < 3; i++) {
+							.slider__item
+								+fancybox({
+									link: 'img/content/slider.jpg',
+									image: 'img/content/slider.jpg',
+									title: 'Img 2',
+									group: 'group-3'
+								})(class='fancybox_rect')
+						- }
 
 		.col-md-7.col-xl-6.mb-30
 			.main__detail-wrap

@@ -17,6 +17,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/toggle/toggle.js'
 	}());
+	(function() {
+		//=require 'blocks/tab/tab.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

@@ -1,0 +1,174 @@
+include ../components/bread
+include ../mixins/fancybox
+include ../mixins/subcat
+
+.main__bread-wrap.mb-30
+	.container
+		+bread
+
+.container
+
+	.row.mb-20
+		.col-md-5.col-xl-6.mb-30
+			.main__detail-image
+				+fancybox({
+					link: 'img/content/slider.jpg',
+					image: 'img/content/slider.jpg',
+					title: 'Img 2',
+					group: 'group-3'
+				})(class='fancybox_rect')
+
+		.col-md-7.col-xl-6.mb-30
+
+			.main__detail-wrap
+
+				.main__detail-title-wrap.mb-20
+					h1.title.title_size_lg= page.title
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Видео:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+							.slider__item
+								+fancybox({
+									link: 'https://www.youtube.com/embed/6uuwDlRKpj4?modestbranding=1&rel=0',
+									image: 'img/content/slider.jpg',
+									title: 'Img ' + (i + 1),
+									group: 'group-slider-1'
+								})(class='fancybox_video')
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Упаковка:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var i = 0; i < 3; i++) {
+								.slider__item
+									+fancybox({
+										link: 'img/content/slider.jpg',
+										image: 'img/content/slider.jpg',
+										title: 'Img ' + (i + 1),
+										group: 'group-slider-2'
+									})
+							- }
+
+				.main__detail-slider-wrap.mb-20
+					h2.title.title_lower.title_size_sm.mb-10 Оборудование:
+
+					.slider.slider_infinite_disabled(
+						data-cols='1'
+						data-sm-cols='2'
+						data-lg-cols='3'
+					)
+						.slider__body
+
+							- for (var i = 0; i < 6; i++) {
+								.slider__item
+									+fancybox({
+										link: 'img/content/subcat.png',
+										image: 'img/content/subcat.png',
+										title: 'Img ' + (i + 1),
+										group: 'group-slider-3',
+										hasTitle: true
+									})(class='fancybox_contain')
+							- }
+
+				.row.main__detail-buttons-wrap.mb-neg-15
+					.col.mb-15
+						a.btn.btn_text_xl.btn_wide.btn_fill_none.upper.nowrap(href='#') Заказать звонок
+					.col.mb-15
+						a.btn.btn_text_xl.btn_wide.upper.nowrap(href='#') Отправить заявку
+
+	.mb-30
+		.tab
+			.tab__header
+				a.tab__link.tab__link_active(href='#' data-tab-link='link-1') Описание
+				a.tab__link(href='#' data-tab-link='link-2') Характеристики
+				a.tab__link(href='#' data-tab-link='link-3') Базовая комплектация
+				a.tab__link(href='#' data-tab-link='link-4') Опции
+			.tab__body
+
+				.tab__panel.tab__panel_active(data-tab-target='link-1')
+					.mb-neg-20
+						.text.main__side-content
+							ul
+								li Изготовлен из нержавеющей стали AISI 304
+								li Оснащен пневматическим и сервоприводом
+								li С автоматом может использоваться объемный, шнековый, весовой или жидкостной дозатор
+								li Высокая производительность достигается за счет одновременной работы нескольких потоков (до 6)
+						.text.mb-20
+							p Компактный и экономичный упаковочный автомат типа Stickpack предназначен для порционной фасовки и упаковки сыпучих, пылящих, мелкоштучных и вязких продуктов.
+								br
+								| Stickpack STP-250 изготовлен из нержавеющей стали AISI 304 и оснащен пневматическим и сервоприводом. С автоматом может использоваться объемный, шнековый, весовой или жидкостной дозатор. Высокая производительность Stickpack STP-250 достигается за счет одновременной работы нескольких потоков (до 6).
+						.mb-20
+							.title.title_size_sm.mb-10 Упаковываемая продукция:
+							.text-sm Cахар, соль, специи, мёд, кетчуп, майонез.
+
+				.tab__panel(data-tab-target='link-2')
+					table.main__table
+						tr
+							td Производительность (кинематическая) до
+							td 240 упак/мин
+						tr
+							td Ширина пакета, мм
+							td 17-40
+						tr
+							td Длина пакета, мм (макс)
+							td 190
+						tr
+							td Упаковочный материал
+							td Ламинированная бумага с внутренним термосвариваевым слоем
+						tr
+							td Ширина рулона пленки, минимум, мм
+							td 50
+
+				.tab__panel(data-tab-target='link-3')
+					.text
+						ul
+							li Блок управления
+							li Формирователь пакета
+							li Устройство протяжки пленки
+							li Система остановки протяжки на фотометке
+							li Продольный и поперечный сварочные узлы
+							li Устройство считывания метки (фотоэлемент)
+							li Система управления (адаптирована для работы с любым типом дозатора)
+
+				.tab__panel(data-tab-target='link-4')
+					.text
+						ul
+							li Дозаторы
+							li Перфорация для легкого открывания
+							li Счетчик пакетов
+							li Отводящий конвейер
+							li Загрузочный конвейер
+
+	.mb-30
+		h2.title.mb-15 С этим покупают:
+
+		.slider.slider_space(
+			data-cols='1'
+			data-sm-cols='2'
+			data-md-cols='3'
+			data-lg-cols='4'
+			data-xl-cols='5'
+		)
+			.slider__body
+
+				- for (var i = 0; i < 6; i++) {
+					.slider__item
+						+subcat({
+							title: 'Подбор пищевого оборудования',
+							link: '#',
+							img: 'img/content/subcat.png'
+						})
+				- }

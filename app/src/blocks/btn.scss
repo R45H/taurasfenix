@@ -51,18 +51,33 @@ $name: btn;
 		padding: 13px 40px;
 	}
 
-	&_color_gray {
+	&_fill_none {
+		color: $color-main;
+		background-color: white;
+
+		&:hover,
+		&:focus {
+			color: $color-main-hover;
+			border-color: currentColor;
+		}
+
+		&:active {
+			color: $color-main-active;
+		}
+	}
+
+	&_disabled,
+	&:disabled {
+		cursor: default;
 		background-color: $color-gray;
 		border-color: $color-gray;
 
 		&:hover,
-		&:focus {
-			color: $color-gray;
-			background-color: white;
-		}
-
+		&:focus,
 		&:active {
-			color: $color-gray-active;
+			background-color: $color-gray;
+			border-color: $color-gray;
+			color: white;
 		}
 	}
 }

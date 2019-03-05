@@ -18,8 +18,88 @@ $name: main;
 		border-bottom: 1px solid $color-gray-light;
 	}
 
+	&__detail-wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
 	&__detail-image {
 		padding: 3rem;
 		border: 1px solid $color-gray-light;
+	}
+
+	&__detail-buttons-wrap {
+		margin-top: auto;
+	}
+
+	&__side-content {
+		margin-bottom: 20px;
+		background-color: $color-light;
+		padding: 15px 10px;
+
+		@include screen-md() {
+			float: right;
+			margin-left: 20px;
+			max-width: 300px;
+		}
+
+		@include screen-xl() {
+			max-width: 350px;
+		}
+	}
+
+	&__table {
+		border-collapse: collapse;
+
+		@include screen-sm(max) {
+			display: block;
+			border: 1px solid $color-gray-light;
+		}
+
+		thead,
+		tbody {
+
+			@include screen-sm(max) {
+				display: block;
+			}
+		}
+
+		tr {
+
+			&:hover {
+				background-color: lighten($color-gray-light, 15%);
+			}
+
+			@include screen-sm(max) {
+				display: block;
+				border-bottom: 1px solid $color-gray-light;
+			}
+
+			&:last-child {
+
+				@include screen-sm(max) {
+					border-bottom: none;
+				}
+			}
+		}
+
+		td {
+			border: 1px solid $color-gray-light;
+			padding: 7px 15px;
+
+			@include screen-sm(max) {
+				display: block;
+				border: none;
+			}
+
+			&:first-child {
+				font-weight: bold;
+
+				@include screen-sm(max) {
+					padding-bottom: 0;
+				}
+			}
+		}
 	}
 }

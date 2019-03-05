@@ -242,6 +242,10 @@ svg {
 	text-transform: uppercase;
 }
 
+.nowrap {
+	white-space: nowrap;
+}
+
 .mb-0 {
 	margin-bottom: 0 !important;
 }
@@ -272,26 +276,32 @@ svg {
 
 .mb-neg-5 {
 	margin-bottom: -5px !important;
+	overflow: hidden;
 }
 
 .mb-neg-10 {
 	margin-bottom: -10px !important;
+	overflow: hidden;
 }
 
 .mb-neg-15 {
 	margin-bottom: -15px !important;
+	overflow: hidden;
 }
 
 .mb-neg-20 {
 	margin-bottom: -20px !important;
+	overflow: hidden;
 }
 
 .mb-neg-30 {
 	margin-bottom: -30px !important;
+	overflow: hidden;
 }
 
 .mb-neg-50 {
 	margin-bottom: -50px !important;
+	overflow: hidden;
 }
 
 .mb-sm-0 {
@@ -347,6 +357,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -5px !important;
+		overflow: hidden;
 	}
 }
 
@@ -354,6 +365,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -10px !important;
+		overflow: hidden;
 	}
 }
 
@@ -361,6 +373,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -15px !important;
+		overflow: hidden;
 	}
 }
 
@@ -368,6 +381,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -20px !important;
+		overflow: hidden;
 	}
 }
 
@@ -375,6 +389,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -30px !important;
+		overflow: hidden;
 	}
 }
 
@@ -382,6 +397,7 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: -50px !important;
+		overflow: hidden;
 	}
 }
 
@@ -438,6 +454,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -5px !important;
+		overflow: hidden;
 	}
 }
 
@@ -445,6 +462,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -10px !important;
+		overflow: hidden;
 	}
 }
 
@@ -452,6 +470,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -15px !important;
+		overflow: hidden;
 	}
 }
 
@@ -459,6 +478,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -20px !important;
+		overflow: hidden;
 	}
 }
 
@@ -466,6 +486,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -30px !important;
+		overflow: hidden;
 	}
 }
 
@@ -473,6 +494,7 @@ svg {
 
 	@include screen-md() {
 		margin-bottom: -50px !important;
+		overflow: hidden;
 	}
 }
 
@@ -529,6 +551,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -5px !important;
+		overflow: hidden;
 	}
 }
 
@@ -536,6 +559,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -10px !important;
+		overflow: hidden;
 	}
 }
 
@@ -543,6 +567,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -15px !important;
+		overflow: hidden;
 	}
 }
 
@@ -550,6 +575,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -20px !important;
+		overflow: hidden;
 	}
 }
 
@@ -557,6 +583,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -30px !important;
+		overflow: hidden;
 	}
 }
 
@@ -564,6 +591,7 @@ svg {
 
 	@include screen-lg() {
 		margin-bottom: -50px !important;
+		overflow: hidden;
 	}
 }
 
@@ -620,6 +648,7 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -5px !important;
+		overflow: hidden;
 	}
 }
 
@@ -627,6 +656,7 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -10px !important;
+		overflow: hidden;
 	}
 }
 
@@ -634,6 +664,7 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -15px !important;
+		overflow: hidden;
 	}
 }
 
@@ -641,6 +672,7 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -20px !important;
+		overflow: hidden;
 	}
 }
 
@@ -648,6 +680,7 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -30px !important;
+		overflow: hidden;
 	}
 }
 
@@ -655,5 +688,6 @@ svg {
 
 	@include screen-xl() {
 		margin-bottom: -50px !important;
+		overflow: hidden;
 	}
 }

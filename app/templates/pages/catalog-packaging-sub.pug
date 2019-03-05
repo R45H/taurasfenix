@@ -1,0 +1,104 @@
+include ../components/bread
+include ../components/sidebar
+include ../mixins/subcat
+include ../mixins/fancybox
+
+.main__bread-wrap.mb-30
+	.container
+		+bread
+
+.container
+
+	.mb-20
+		h1.title.title_size_lg= page.title
+
+	.row
+
+		.d-none.d-md-block.col-md-4.order-md-1.col-lg-3.mb-15
+			+sidebar
+
+		.col-md-8.col-lg-9.mb-15
+
+			.mb-30
+
+				.slider.slider_space(
+					data-cols='1'
+					data-sm-cols='2'
+					data-lg-cols='3'
+				)
+					.slider__body
+
+						- for (var i = 0; i < 6; i++) {
+							.slider__item
+								+subcat({
+									title: 'Подбор пищевого оборудования',
+									link: 'detail-product.html',
+									img: 'img/content/subcat.png',
+									params: [
+										'Производительность до: 80 упак/мин',
+										'Особенность: бюджетная производительная модель.'
+									],
+									check: {
+										text: 'Сравнение',
+										id: 'check-subcat-' + (i + 1)
+									}
+								})
+						- }
+
+			.mb-30
+				.main__btn-right
+					a.btn.btn_text_xl.upper(href='#') Получить консультацию
+				.text
+					p Пакеты типа Stick – один из наиболее распространенных видов упаковки для разнообразных групп товаров:
+					ul
+						li жидких и пастообразных (горчица, кетчуп, майонез);
+						li сыпучих или гранулированных (сахар, соль, кофе, пряные специи, перец);
+						li средств бытовой химии и личной гигиены (шампуни, жидкое мыло, порошки, крема).
+					p Такая популярность данного вида тары обеспечивается целым рядом ее преимуществ:
+					ul
+						li Экономичность и доступность.
+						li Компактные размеры упаковки.
+						li Легкость и простота использования.
+						li Высокая устойчивость к деформации.
+					p Продукцию в пакете stick предпочитают авиа-, железнодорожные компании, гостиницы и другие компании, работающие в сфере обслуживания населения.
+
+
+			.row
+				.col-lg-6.mb-30
+					.mb-15
+						h2.title Видео:
+
+					.slider
+						.slider__body
+
+							- for (var i = 0; i < 3; i++) {
+								.slider__item
+									+fancybox({
+										link: 'https://www.youtube.com/embed/6uuwDlRKpj4?modestbranding=1&rel=0',
+										image: 'img/content/slider.jpg',
+										title: 'Video',
+										group: 'group-slider-1'
+									})(class='fancybox_video')
+							- }
+				.col-lg-6.mb-30
+					.mb-15
+						h2.title Примеры упаковок:
+
+					.mb-15
+						.slider(data-sm-cols='2')
+							.slider__body
+
+								- for (var i = 0; i < 6; i++) {
+									.slider__item
+										+fancybox({
+											link: 'img/content/slider.jpg',
+											image: 'img/content/slider.jpg',
+											title: 'Image',
+											group: 'group-slider-2'
+										})
+								- }
+
+					.mb-15
+						.text-sm Наша компания сотрудничает с производителями тары и упаковочных материалов. Вы можете оставить запрос на плёнку для стиков - мы передадим его нашим партнёрам.
+					.text-center.text-lg-right
+						a.btn.btn_text_xl.upper(href='#') Отправить заявку

@@ -13,10 +13,10 @@ include ../mixins/subcat
 
 	.row
 
-		.col-sm-6.order-sm-1.col-md-4.col-lg-3.mb-15
+		.d-none.d-md-block.col-md-4.order-md-1.col-lg-3.mb-15
 			+sidebar
 
-		.col-sm-6.col-md-8.col-lg-9.mb-15
+		.col-md-8.col-lg-9.mb-15
 
 			- for (var i = 0; i < 5; i++) {
 				.mb-30
@@ -25,7 +25,7 @@ include ../mixins/subcat
 
 					.slider.slider_space(
 						data-cols='1'
-						data-md-cols='2'
+						data-sm-cols='2'
 						data-lg-cols='3'
 					)
 						.slider__body

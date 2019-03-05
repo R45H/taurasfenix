@@ -13,14 +13,14 @@ include ../mixins/subcat
 
 	.row
 
-		.col-sm-6.order-sm-1.col-md-4.col-lg-3.mb-15
+		.d-none.d-md-block.col-md-4.order-md-1.col-lg-3.mb-15
 			+sidebar
 
-		.col-sm-6.col-md-8.col-lg-9.mb-15
+		.col-md-8.col-lg-9.mb-15
 			.row
 
 				- for (var i = 0; i < 9; i++) {
-					.col-12.col-md-6.col-lg-4.mb-15.mb-sm-30
+					.col-sm-6.col-lg-4.mb-15.mb-sm-30
 						+subcat({
 							title: 'Подбор пищевого оборудования',
 							link: 'detail-product.html',

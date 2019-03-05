@@ -102,4 +102,14 @@ $name: main;
 			}
 		}
 	}
+
+	&__btn-right {
+		margin-bottom: 20px;
+		text-align: center;
+
+		@include screen-sm() {
+			float: right;
+			margin-left: 20px;
+		}
+	}
 }

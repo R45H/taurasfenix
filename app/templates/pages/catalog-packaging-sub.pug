@@ -68,7 +68,7 @@ include ../mixins/fancybox
 					.mb-15
 						h2.title Видео:
 
-					.slider
+					.slider.slider_infinite_disabled
 						.slider__body
 
 							- for (var i = 0; i < 3; i++) {
@@ -85,7 +85,7 @@ include ../mixins/fancybox
 						h2.title Примеры упаковок:
 
 					.mb-15
-						.slider(data-sm-cols='2')
+						.slider.slider_infinite_disabled(data-sm-cols='2')
 							.slider__body
 
 								- for (var i = 0; i < 6; i++) {

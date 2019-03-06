@@ -23,6 +23,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/modal/modal.js'
 	}());
+	(function() {
+		//=require 'blocks/select/select.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

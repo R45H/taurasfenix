@@ -1,0 +1,116 @@
+$name: select;
+
+.#{$name} {
+	display: inline-block;
+	max-width: 100%;
+
+	&__current {
+		@extend .input;
+		max-width: 100%;
+		fill: currentColor;
+		outline: none;
+		padding-right: 41px;
+		margin: 0;
+		appearance: none;
+
+		&_active {
+
+			&::before {
+				display: block;
+			}
+
+			&:hover,
+			&:focus {
+
+			}
+
+			.#{$name} {
+				// =====
+
+				&__icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		&.ui-button {
+			width: auto;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		width: 11px;
+		height: 11px;
+		margin-top: -5px;
+		transition: transform $duration / 2 ease;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__list {
+		z-index: 150;
+		border: 0;
+		background: white;
+		font-size: 14px;
+
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: -1px 0 0;
+			color: $color-main-hover;
+			border: 1px solid;
+			max-height: 316px;
+			position: relative;
+			outline: none;
+		}
+
+		.ui-menu-item {
+
+			&:first-child {
+
+				.ui-menu-item-wrapper {
+					padding-top: 10px;
+				}
+			}
+
+			&:last-child {
+
+				.ui-menu-item-wrapper {
+					padding-bottom: 10px;
+				}
+			}
+		}
+
+		.ui-menu-item-wrapper {
+			@extend %transition;
+			cursor: pointer;
+			padding: 5px 20px;
+			font-weight: 400;
+			color: $color-text;
+
+			&.ui-state-active {
+				color: $color-main-hover;
+			}
+
+			&:active {
+				color: $color-main-active;
+			}
+		}
+	}
+
+	&_wide {
+		display: block;
+
+		.#{$name} {
+
+			&__current {
+				width: 100%;
+			}
+		}
+	}
+}

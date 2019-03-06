@@ -25,9 +25,10 @@
 @import 'blocks/toggle/toggle'; // Гамбургер
 @import 'blocks/sidebar'; // Категории в каталоге
 @import 'blocks/text'; // Текстовый блок
-@import 'blocks/tab/tab';
-@import 'blocks/modal/modal';
-@import 'blocks/fog';
+@import 'blocks/tab/tab'; // Табы
+@import 'blocks/modal/modal'; // Модалка
+@import 'blocks/fog'; // Затемнение экрана
+@import 'blocks/select/select'; // Кастомные селекты
 /* Blocks will be inserted here */
 // =====
 

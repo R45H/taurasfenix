@@ -1,3 +1,6 @@
+include ../mixins/svg
+include ../mixins/select
+
 #modalQuestion.modal
 	.modal__wrap
 
@@ -67,7 +70,15 @@
 					.col-md-6.mb-15.mb-sm-30
 						input.input(type='email' placeholder='Электронная почта *')
 					.col-md-6.mb-15.mb-sm-30
-						input.input(type='text' placeholder='Продукция (тут должен быть селект)')
+						+select([
+							'Сыпучая',
+							'Молочная',
+							'Мёд, варенье',
+							'Кондитерская/хлебобулочная',
+							'Овощи, фрукты',
+							'Напитки',
+							'Прочее'
+						])(class='select_wide')
 					.col-md-6.mb-15.mb-sm-30
 						input.input(type='tel' placeholder='Телефон *')
 				hr.mb-15.mb-sm-30

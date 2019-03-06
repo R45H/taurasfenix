@@ -1,4 +1,6 @@
 include ../components/social
+include ../components/bread
+include ../components/toggle
 include ../mixins/svg
 include ../mixins/logo
 include ../mixins/check
@@ -8,8 +10,7 @@ include ../mixins/news
 include ../mixins/news-simple
 include ../mixins/fancybox
 include ../mixins/slider-single
-include ../components/bread
-include ../components/toggle
+include ../mixins/select
 
 .container
 	.row.main__separator
@@ -101,6 +102,18 @@ include ../components/toggle
 			input.input.input_number(type='text' placeholder='.input.input_number')
 		.col-3.mb-30
 			textarea.input(placeholder='textarea.input')
+
+	.row.main__separator
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])(class='select_wide')
 
 	.row.main__separator
 		.col-12

@@ -85,6 +85,9 @@ a {
 
 hr {
 	margin: 0;
+	height: 1px;
+	border: none;
+	background: $color-gray-light;
 }
 
 img,
@@ -228,6 +231,10 @@ svg {
 
 .text-sm {
 	font-size: 12px;
+}
+
+.text-xs {
+	font-size: 9px;
 }
 
 .text-italic {

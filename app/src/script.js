@@ -20,6 +20,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/tab/tab.js'
 	}());
+	(function() {
+		//=require 'blocks/modal/modal.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

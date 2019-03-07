@@ -1,0 +1,14 @@
+// ASIDE
+aside.aside
+
+	.aside__close
+		+svg('close', 'aside__close-icon')
+
+	ul.aside__list
+
+		each val in menu
+			li.aside__item
+				a.aside__link(
+					href= val.link
+					class= val.link === page.link ? 'aside__link_active' : ''
+				)= val.name

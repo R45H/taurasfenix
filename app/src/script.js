@@ -26,6 +26,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/select/select.js'
 	}());
+	(function() {
+		//=require 'blocks/aside/aside.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

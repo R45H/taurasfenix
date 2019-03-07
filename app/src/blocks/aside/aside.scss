@@ -1,0 +1,82 @@
+$name: aside;
+
+.#{$name} {
+	position: fixed;
+	top: 0;
+	right: -250px;
+	bottom: 0;
+	width: 250px;
+	max-width: 70%;
+	background: $color-main;
+	padding: 100px 0 0;
+	z-index: 100;
+	transition: $duration / 2 ease;
+
+	&__close {
+		@extend %transition;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: 50px;
+		height: 50px;
+		padding: 15px;
+		fill: white;
+		cursor: pointer;
+
+		&:hover {
+			fill: darken(white, 15%);
+		}
+
+		&:active {
+			fill: darken(white, 30%);
+		}
+	}
+
+	&__close-icon {
+		display: block;
+	}
+
+	&__list {
+		list-style-type: none;
+		padding: 0 0 15px;
+		margin: 0;
+		overflow: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: block;
+	}
+
+	&__link {
+		@extend %transition;
+		display: block;
+		padding: 10px 15px;
+		font-family: $font-second;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: white;
+
+		&:hover {
+			background-color: white;
+			color: black;
+		}
+
+		&:active {
+			background-color: darken(white, 10%);
+		}
+	}
+
+	&__text {
+
+	}
+
+	&_opened {
+		right: 0;
+		transition: $duration ease;
+	}
+}

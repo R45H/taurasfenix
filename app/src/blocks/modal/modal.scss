@@ -93,7 +93,34 @@ $name: modal;
 		}
 	}
 
+	&__input-title {
+		font-size: 15px;
+		margin-bottom: 5px;
+		display: block;
+	}
+
 	&_visible {
 		display: flex;
+	}
+
+	&_custom-inputs {
+
+		label {
+			display: block;
+		}
+
+		input {
+
+			&[type='text'],
+			&[type='tel'],
+			&[type='email'] {
+				@extend .input;
+			}
+		}
+
+		textarea {
+			@extend .input;
+			@extend textarea.input;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 var
 	classBlock = 'select', // Класс блока
-	$selects = $('.' + classBlock + '__origin'); // Нативные селекты
+	$selects = $('.' + classBlock + '__origin, .modal_custom-inputs select'); // Нативные селекты
 
 $selects.each(function() {
 	var

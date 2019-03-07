@@ -698,3 +698,11 @@ svg {
 		overflow: hidden;
 	}
 }
+
+body font.errortext {
+	font-size: 15px;
+	border: 1px solid $color-error;
+	display: block;
+	padding: 10px 15px;
+	color: $color-error !important;
+}
